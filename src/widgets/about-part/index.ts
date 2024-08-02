@@ -1,0 +1,1 @@
+export { About_part } from './About_part';
