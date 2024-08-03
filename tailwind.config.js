@@ -18,20 +18,26 @@ module.exports = {
         'minus-136': 'calc(100vh - 136px)',
         'minus-87': 'calc(100vh - 87px)',
         'minus-60': 'calc(100vh - 60px)',
-      },
-      textAlign: {
-        'inherit': 'inherit',
-      }
+      },     
     },
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
-        '.text-align-inherit': {
-          textAlign: 'inherit',
+        '.list-item-before': {
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          height: '39px',
+          width: '39px',
+          'background-image': "url('/src/shared/images/about-part/list-icon.png')",
+          'background-repeat': 'no-repeat',
+          content: "''",
+          display: 'inline-block',
         },
       }
-      addUtilities(newUtilities, ['responsive'])
+
+      addUtilities(newUtilities, ['before'])
     }
   ],
 }

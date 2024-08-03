@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Heading = () => {
   return (
     <section className='bg-[#3d1f94] overflow-x-hidden'>

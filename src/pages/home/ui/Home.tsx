@@ -2,10 +2,13 @@ import { FC, useEffect, useState } from 'react';
 
 import { images } from '../../../shared/images/price/index';
 
+import about from "../../../shared/images/about-part/about-img.svg";
+
 import { Banner } from '../../../widgets/banner';
 import { Heading } from '../../../widgets/heading';
 import { Prices } from '../../../widgets/prices';
 import { About_part } from '../../../widgets/about-part';
+import { Services } from '../../../widgets/services';
 
 interface CryptoData {
   name: string;
@@ -23,6 +26,12 @@ const cryptos = [
   { name: 'Binance Coin', abbreviation: 'BNB', color: '#3452ff', ws: 'wss://stream.binance.com:9443/ws/bnbusdt@ticker' },
   { name: 'Litecoin', abbreviation: 'LTC', color: '#3d434f', ws: 'wss://stream.binance.com:9443/ws/ltcusdt@ticker' },
   { name: 'Bitcoin Cash', abbreviation: 'BCH', color: '#016cb0', ws: 'wss://stream.binance.com:9443/ws/bchusdt@ticker' }
+];
+
+const rewards: string[] = [
+  "Earn daily rewards on your balance, no lock-up period",
+  "Purchase newly-listed tokens at up to 50% off",
+  "Prize pools worth up to USD 1,000,000"
 ];
 
 export const Home: FC = () => {
@@ -84,7 +93,8 @@ const getChangeClassName = (change: string): string => {
       <Banner/>
       <Heading/>
       <Prices data={cryptoData} getChangeClassName={getChangeClassName} />
-      <About_part/>
+      <About_part rewards={rewards} aboutImage={about}/>
+      <Services/>
     </>
   )
 }
