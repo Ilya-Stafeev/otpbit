@@ -12,6 +12,32 @@ export const Services: FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="mb-[-30px]">
+                    <div className="flex flex-col my-[-10px]">
+                        <div className="py-[15px]">
+                            <div className="mb-[30px] text-center services-box">
+                                <div className="frontend">
+                                    <div>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className="services-detail">
+                                        <h3>Currency Wallet</h3>
+                                        <p>
+                                            Get a life-time free Currency wallet maintained by Otpbit, the leading provider of secure Bitcoin wallets.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="backend">
+                                    <div className="services-detail">
+                                        <p>
+                                            Buy or Sell Bitcoin on Otpbit in real time. Trade with other users online using our live chat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
             </div>
     </section>
   )
