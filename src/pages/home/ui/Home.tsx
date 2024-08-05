@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 
-import { images } from '../../../shared/images/price/index';
+import { imagesСoins } from '../../../shared/images/price/index';
+import { imagesServices } from '../../../shared/images/services/index';
 
 import about from "../../../shared/images/about-part/about-img.svg";
 
@@ -34,11 +35,50 @@ const rewards: string[] = [
   "Prize pools worth up to USD 1,000,000"
 ];
 
+const services = [
+  {
+    image: imagesServices.icon1,
+    title: "Currency Wallet",
+    description: "Get a life-time free Currency wallet maintained by Otpbit, the leading provider of secure Bitcoin wallets.",
+    backendDescription: "Buy or Sell Bitcoin on Otpbit in real time. Trade with other users online using our live chat."
+  },
+  {
+    image: imagesServices.icon2,
+    title: "Bitcoin Escrow Service",
+    description: "Your Bitcoin is held in our secure escrow until the trade is completed successfully.",
+    backendDescription: "A marketing tool that rewards you for holding a deposit. Earn up to 18% interest rate per 6 months."
+  },
+  {
+    image: imagesServices.icon3,
+    title: "Security Storage",
+    description: "Our platform is designed to protect funds and personal data better. Your privacy always comes first",
+    backendDescription: "Since 2008, hundreds of millions of people have safely exchanged trillions of dollars worth of crypto. In fact, security is a big reason why digital money was created."
+  },
+  {
+    image: imagesServices.icon4,
+    title: "Reliable & Low Cost",
+    description: "Benefit from low fees, fast order execution, and advanced platform features to increase your profitability",
+    backendDescription: "Transaction and trading costs on Otpbit range from 0% to 4.5% depending on the cryptocurrency, transaction size and payment method."
+  },
+  {
+    image: imagesServices.icon5,
+    title: "Reliable & Low Cost",
+    description: "We have always followed a client-oriented approach and placed our clients’ interests at the center of all our operations.",
+    backendDescription: "Otpbit maintains crypto insurance and all USD cash balances are covered by FDIC insurance, up to a maximum of $550,000."
+  },
+  {
+    image: imagesServices.icon6,
+    title: "Experts Support",
+    description: "Our customer service team works 24/7 to provide you with an exceptional level of support.",
+    backendDescription: "We offer dependable, on-demand support options including 24/7 technical and remote support and 4-hour and next business day global on-site support in over 100 countries worldwide."
+  }
+];
+
 export const Home: FC = () => {
   const [cryptoData, setCryptoData] = useState<CryptoData[]>(
     cryptos.map(crypto => ({
         ...crypto,
-        image: images[crypto.abbreviation],
+        image: imagesСoins[crypto.abbreviation],
         price: '',
         priceChange: '',
         volume: ''
@@ -94,7 +134,7 @@ const getChangeClassName = (change: string): string => {
       <Heading/>
       <Prices data={cryptoData} getChangeClassName={getChangeClassName} />
       <About_part rewards={rewards} aboutImage={about}/>
-      <Services/>
+      <Services services={services}/>
     </>
   )
 }
