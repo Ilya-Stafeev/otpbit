@@ -28,8 +28,8 @@ export const Services: FC<ServicesProps> = ({ services }) => {
                         {services.map((service, index) => (
                             <div key={index} className="">
                                 <div className="text-center services-box lg:text-left">
-                                    <div className="frontend p-[15px] sm:p-[30px] lg:flex">
-                                        <div className="inline-block lg:h-[52px] lg:w-[52px]">
+                                    <div className="frontend p-[15px] sm:p-[30px]">
+                                        <div className="inline-block lg:h-[52px] lg:w-[52px] lg:float-left">
                                             <img className="lg:h-[52px] lg:w-[52px]" src={service.image} alt={service.title} />
                                         </div>
                                         <div className="services-detail mt-[5px] lg:ml-[72px] lg:mt-[0px]">

@@ -10,6 +10,7 @@ import { Heading } from '../../../widgets/heading';
 import { Prices } from '../../../widgets/prices';
 import { About_part } from '../../../widgets/about-part';
 import { Services } from '../../../widgets/services';
+import { Forms_part } from '../../../widgets/forms-part';
 
 interface CryptoData {
   name: string;
@@ -135,6 +136,7 @@ const getChangeClassName = (change: string): string => {
       <Prices data={cryptoData} getChangeClassName={getChangeClassName} />
       <About_part rewards={rewards} aboutImage={about}/>
       <Services services={services}/>
+      <Forms_part/>
     </>
   )
 }
