@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 
 import { imagesСoins } from '../../../shared/images/price/index';
 import { imagesServices } from '../../../shared/images/services/index';
+import { imagesForms } from '../../../shared/images/forms-part/index';
 
 import about from "../../../shared/images/about-part/about-img.svg";
 
@@ -75,6 +76,12 @@ const services = [
   }
 ];
 
+const formContent = [
+  { image: imagesForms.phone, title: 'Call Us On', text: '+30 698 1583294' },
+  { image: imagesForms.mail, title: 'Email', text: 'support@otpbit.com' },
+  { image: imagesForms.license, title: 'Licence', text: 'otpbit is a brand name of Vie Finance A.E.P.E.Y. S.A., licenced and regulated by HCMC (licence no. 4/792/20.07.2017) and General Commercial Registry no: 122000301000. 4, 28th Octovriou street, Maroussi 15124, Athens, Greece Disclaimer and Risk Warning' }
+];
+
 export const Home: FC = () => {
   const [cryptoData, setCryptoData] = useState<CryptoData[]>(
     cryptos.map(crypto => ({
@@ -136,7 +143,7 @@ const getChangeClassName = (change: string): string => {
       <Prices data={cryptoData} getChangeClassName={getChangeClassName} />
       <About_part rewards={rewards} aboutImage={about}/>
       <Services services={services}/>
-      <Forms_part/>
+      <Forms_part content={formContent}/>
     </>
   )
 }
