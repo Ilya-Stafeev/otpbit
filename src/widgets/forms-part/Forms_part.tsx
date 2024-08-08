@@ -22,25 +22,39 @@ export const Forms_part: FC<FormsPartProps> = ({ content  }) => {
             </div>
           </div>
         </div>
-        <div className='flex'>
-          <div className='px-[15px]'>
+        <div className='grid grid-cols-1'>
+          <div className=''>
             <div className='text-[#fff] text-left inline-block'>
               <ul>
                 {content.map((item, index) => (
-                  <li key={index}>
+                  <li className='mb-[15px] pb-[15px]' key={index}>
                     <div className='float-left mr-[10px]'>
                       <img src={item.image} alt={item.title} />
                     </div>
                     <div className='ml-[50px]'>
                       <h3 className='text-[16px] leading-[25px]'>{item.title}</h3>
-                      <p>{item.text}</p>
+                      <div className='w-full'>{item.text}</div>
                     </div>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className='px-[15px]'></div>
+          <div className=''>
+            <form action="" className='mb-[1rem]'>
+              <div>
+                <div className='mb-[30px]'>
+                  <input type="text" placeholder="Name" required className='outline-none leading-[1.5] text-[1rem] rounded block w-full px-[15px] py-[.50rem] text-[#fff] h-[50px] border-none bg-[#4a28a9]'/>
+                </div>
+                <div className='mb-[30px]'>
+                  <input type="text" placeholder="Email" required className='outline-none leading-[1.5]  text-[1rem] rounded block w-full px-[15px] py-[.50rem] text-[#fff] h-[50px] border-none bg-[#4a28a9]'/>
+                </div>
+              </div>
+              <div></div>
+              <div></div>
+              <button type="submit" className=''></button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
