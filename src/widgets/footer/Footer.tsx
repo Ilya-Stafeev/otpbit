@@ -1,5 +1,6 @@
+import { FC } from 'react';
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <footer className="text-center block">
         <div className="px-[15px] mx-auto max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1200px]">

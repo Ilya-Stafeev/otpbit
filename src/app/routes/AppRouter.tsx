@@ -1,8 +1,12 @@
 import { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Home } from "../../pages/home";
+import { PageProvider } from '../providers/PageProvider';
+
 import { Layout } from "../layout/Layout";
+import { Home } from '../../pages/home';
+import { About } from '../../pages/about';
+import { Terms } from '../../pages/terms';
 
 export const AppRouter: FC = () => {
 
@@ -17,11 +21,19 @@ export const AppRouter: FC = () => {
             },
             {
               path: 'about',
-              // element: <About />,
+              element: (
+                <PageProvider>
+                  <About />
+                </PageProvider>
+              ),
             },
             {
               path: 'terms',
-              // element: <Terms />,
+              element: (
+                <PageProvider>
+                  <Terms />
+                </PageProvider>
+              ),
             },
           ],
         },

@@ -35,9 +35,19 @@ module.exports = {
           content: "''",
           display: 'inline-block',
         },
+        '.custom-pseudo::after': {
+          content: "'/'",
+          position: 'absolute',
+          right: '1px',
+          top: '0px',
+          bottom: '0px',
+          margin: 'auto 0',
+          'font-size': '16px',
+          color: '#fff',
+        },
       }
 
-      addUtilities(newUtilities, ['before'])
+      addUtilities(newUtilities, ['responsive', 'hover'])
     }
   ],
 }

@@ -1,0 +1,1 @@
+export { Name_page } from './Name_page'
