@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { usePage } from '../../app/providers/PageProvider';
+import { usePage } from '../../app/providers/PageProvider/PageProvider';
 
 export const Name_page: FC = () => {
   const { currentPath, currentPageTitle, currentLinkTitle } = usePage();

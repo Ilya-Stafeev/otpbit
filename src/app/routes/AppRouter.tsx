@@ -1,19 +1,29 @@
 import { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { PageProvider } from '../providers/PageProvider';
+import { PageProvider, PageTransitionProvider } from '../providers';
+
+import { PageTransition } from '../../shared';
 
 import { Layout } from "../layout/Layout";
 import { Home } from '../../pages/home';
 import { About } from '../../pages/about';
 import { Terms } from '../../pages/terms';
 
+
 export const AppRouter: FC = () => {
 
     const router = createBrowserRouter([
         {
           path: '/',
-          element: <Layout />,
+          element: (
+            <>              
+              <PageTransitionProvider>
+                <Layout />
+                <PageTransition />
+              </PageTransitionProvider>
+            </>           
+          ),
           children: [
             {
               path: '',
@@ -55,7 +65,7 @@ export const AppRouter: FC = () => {
         },
       ]);
 
-  return (
-    <RouterProvider router={router} />
+  return (    
+    <RouterProvider router={router} />     
   )
 }

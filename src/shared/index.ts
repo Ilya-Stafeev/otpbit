@@ -1,0 +1,1 @@
+export { PageTransition } from './ui/pageTransition/PageTransition'

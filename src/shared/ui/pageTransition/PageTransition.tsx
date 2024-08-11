@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { usePageTransition } from '../../../app/providers/PageTransitionProvider/PageTransitionProvider';
 import './PageTransition.scss';
 
-export const Preloader = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
+export const PageTransition = () => {
+  const { isVisible } = usePageTransition();
 
   if (!isVisible) return null;
 
