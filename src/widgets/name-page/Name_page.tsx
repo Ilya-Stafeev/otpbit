@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { usePage } from '../../app/providers/PageProvider/PageProvider';
 
 export const Name_page: FC = () => {
   const { currentPath, currentPageTitle, currentLinkTitle } = usePage();
 
   return (
-    <section className='bg-image-name_page pt-[60px]'>
-      <div className='py-[30px] text-center'>
+    <section className='bg-image-name_page pt-[60px] md:pt-[87px] lg:pt-[136px]'>
+      <div className='py-[30px] text-center md:py-[50px] lg:py-[102px]'>
         <div className='px-[15px] w-full'>
-          <h1 className='text-[35px] font-bold leading-[40px] mb-[10px]'>
+          <h1 className='text-[35px] tracking-[1px] font-bold leading-[40px] mb-[10px] md:text-[43px] lg:text-[45px]'>
             {currentLinkTitle}
           </h1>
           <div className='text-center flex items-center justify-center'>

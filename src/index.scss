@@ -27,6 +27,19 @@ body {
   background: url('/shared/images/name-page/bg-image.jpg') no-repeat scroll 0 0 #3d1f94;
 }
 
+.image-decor {
+  background: url('/shared/images/stories-part/decor.png');  
+}
+
+.bg-image-fact_counter {
+  background: url('/shared/images/fact-counter/fact-counter.jpg') no-repeat scroll 0 0 #3d1f94;
+  background-position: center top;
+  background-attachment: scroll;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 tbody {
   &:hover {
     tr {
@@ -91,4 +104,18 @@ tbody {
       transform: translateZ(70px) scale(0.86);
       backface-visibility: hidden;
     }
+}
+
+
+.fact-counter-area {
+  &::before {
+    background: rgb(57 33 143 / 82%) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
 }
