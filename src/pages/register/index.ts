@@ -1,0 +1,1 @@
+export { Register_page } from './ui/Register_page'

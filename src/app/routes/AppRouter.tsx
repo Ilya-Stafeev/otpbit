@@ -10,6 +10,10 @@ import { Home } from '../../pages/home';
 import { About } from '../../pages/about';
 import { Terms } from '../../pages/terms';
 
+import { Auth_page } from '../../pages/auth';
+import { Register_page } from '../../pages/register';
+import { Recover_page } from '../../pages/recover';
+
 
 export const AppRouter: FC = () => {
 
@@ -44,6 +48,18 @@ export const AppRouter: FC = () => {
                   <Terms />
                 </PageProvider>
               ),
+            },
+            {
+              path: 'auth',
+              element: <Auth_page />
+            },
+            {
+              path: 'register',
+              element: <Register_page />
+            },
+            {
+              path: 'recover',
+              element: <Recover_page />
             },
           ],
         },
